@@ -4,11 +4,9 @@
  *
  */
 function solution(s) {
-    let str = s.split(" ").map((val) => {
-        let temp = val.toLowerCase();
-        if(0*temp.charAt(0) !== 0) temp = temp.charAt(0).toUpperCase() + temp.slice(1,temp.length);
-        return temp;
-    });
-
+    const str = s.split(" ").reduce((acc,cur,idx) => {
+        acc.push(cur.charAt(0).toUpperCase() + cur.toLowerCase().slice(1,cur.length))
+        return acc;
+    } ,[])
     return str.join(" ");
 }
