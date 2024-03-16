@@ -4,7 +4,7 @@
  *
  */
 function solution(s) {
-    const str = s.split(" ").reduce((acc,cur,idx) => {
+    const str = s.split(" ").reduce((acc,cur) => {
         acc.push(cur.charAt(0).toUpperCase() + cur.toLowerCase().slice(1,cur.length))
         return acc;
     } ,[])
